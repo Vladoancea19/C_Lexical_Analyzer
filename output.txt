@@ -1,0 +1,19 @@
+cuvant cheie - float
+identificator - a
+operator - =
+constanta in virgula mobila - 5.6
+identificator - ep
+punctuator - ;
+cuvant cheie - int
+identificator - main
+cuvant cheie - if
+identificator - abc
+operator - >
+constanta intreaga - 4
+identificator - abc
+operator - =
+constanta intreaga - 4
+punctuator - ;
+cuvant cheie - return
+constanta intreaga - 0
+punctuator - ;

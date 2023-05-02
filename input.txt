@@ -1,0 +1,7 @@
+float a = 5.6ep;
+
+int main() {
+    if(abc > 4) abc = 4;
+
+    return 0;
+}

@@ -1,0 +1,9 @@
+# ninja log v5
+25	462	7047215349067646	CMakeFiles/C_Lexical_Analyzer.dir/Transition.cpp.obj	9848053ec4e6f430
+16	648	7047215350932798	CMakeFiles/C_Lexical_Analyzer.dir/LexicalAnalyzer.cpp.obj	d50e724247d662ef
+33	698	7047215351431616	CMakeFiles/C_Lexical_Analyzer.dir/TokenValueMap.cpp.obj	18945840ea0c6d5f
+0	761	7047215352069876	CMakeFiles/C_Lexical_Analyzer.dir/Token.cpp.obj	54d2316195e9d674
+9	895	7047215353403244	CMakeFiles/C_Lexical_Analyzer.dir/main.cpp.obj	385c1c1b4bc76b0d
+895	1086	7047215355234162	C_Lexical_Analyzer.exe	67ce1b6ce7c597d1
+3	1079	7047217721076558	CMakeFiles/C_Lexical_Analyzer.dir/main.cpp.obj	385c1c1b4bc76b0d
+1080	1311	7047217723370433	C_Lexical_Analyzer.exe	67ce1b6ce7c597d1
