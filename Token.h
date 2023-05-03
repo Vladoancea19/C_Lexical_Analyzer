@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
+#include <vector>
+
 #include "TokenValueMap.h"
 
 using namespace std;
@@ -21,7 +24,7 @@ public:
 
     void setValue(int value);
 
-    void writeToken(TokenValueMap tokenValueMap, ofstream &fout) const;
+    void writeToken(TokenValueMap &tokenValueMap, ofstream &fout) const;
 };
 
 #endif

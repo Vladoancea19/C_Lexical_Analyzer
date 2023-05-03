@@ -22,20 +22,20 @@ void Token::setValue(int value) {
     Token::value = value;
 }
 
-void Token::writeToken(TokenValueMap tokenValueMap, ofstream &fout) const {
+void Token::writeToken(TokenValueMap &tokenValueMap, ofstream &fout) const {
     string tokenType, tokenValue;
+    int i = 0;
 
-    for(int i = 0; i < tokenValueMap.getNoTokenValues(); i++) {
-        if(tokenValueMap.getValues()[i] == this->value) {
-            if(tokenValueMap.getIsDistinct()[i]){
+    for (auto const& [key, val] : tokenValueMap.getValuesToStrings()) {
+        if(key == this->value) {
+            if(tokenValueMap.getIsDistinct()[i])
                 return;
-            }
             else {
-                tokenValue = tokenValueMap.getStringValues()[i];
+                tokenValue = val;
                 tokenValueMap.modifyIsDistinct(i, true);
-                break;
             }
         }
+        i++;
     }
 
     switch (this->type) {
@@ -59,6 +59,9 @@ void Token::writeToken(TokenValueMap tokenValueMap, ofstream &fout) const {
             break;
         case 9:
             tokenType = "operator";
+            break;
+        case 10:
+            tokenType = "caracter special";
             break;
         default:
             return;

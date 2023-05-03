@@ -1,31 +1,24 @@
 #ifndef ANALIZATOR_LEXICAL_C_TOKENVALUEMAP_H
 #define ANALIZATOR_LEXICAL_C_TOKENVALUEMAP_H
 
-#include <vector>
 #include <string>
+#include <vector>
+#include <map>
 
 using namespace std;
 
 class TokenValueMap {
-    int noTokenValues;
-    vector<int> values;
-    vector<string> stringValues;
+    map<int, string> valuesToStrings;
     vector<bool> isDistinct;
 
 public:
     TokenValueMap();
 
-    [[nodiscard]] int getNoTokenValues() const;
+    [[nodiscard]] const map<int, string> &getValuesToStrings() const;
 
-    void setNoTokenValues(int noTokenValues);
+    void setValuesToStrings();
 
-    [[nodiscard]] const vector<int> &getValues() const;
-
-    void setValues(int values);
-
-    [[nodiscard]] const vector <string> &getStringValues() const;
-
-    void setStringValues(string stringValues);
+    void insertValuesToStrings(int key, string val);
 
     [[nodiscard]] const vector<bool> &getIsDistinct() const;
 

@@ -1,12 +1,11 @@
 #include <iostream>
+#include <string>
 #include <fstream>
 #include "LexicalAnalyzer.h"
 
-using namespace std;
-
 int main() {
-    ifstream fin("D:\\CLion\\C_Lexical_Analyzer\\input.txt", ifstream::in);
-    ofstream fout("D:\\CLion\\C_Lexical_Analyzer\\output.txt", ofstream::out);
+    ifstream fin("C:\\Z\\CLion\\C_Lexical_Analyzer\\input.txt", ifstream::in);
+    ofstream fout("C:\\Z\\CLion\\C_Lexical_Analyzer\\output.txt", ofstream::out);
 
     LexicalAnalyzer lexicalAnalyzer = LexicalAnalyzer(fin);
     Token token;
@@ -20,7 +19,7 @@ int main() {
         token = lexicalAnalyzer.getToken();
 
         if(token.getType() != -1)
-            token.writeToken(lexicalAnalyzer.getTokenValueMap(), fout);
+            token.writeToken(const_cast<TokenValueMap &>(lexicalAnalyzer.getTokenValueMap()), fout);
         else {
             fout << "eroare lexicala" << " - " << lexicalAnalyzer.getPositionInFile();
             break;

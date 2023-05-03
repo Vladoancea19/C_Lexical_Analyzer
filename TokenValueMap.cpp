@@ -2,30 +2,6 @@
 
 TokenValueMap::TokenValueMap() {}
 
-int TokenValueMap::getNoTokenValues() const {
-    return noTokenValues;
-}
-
-void TokenValueMap::setNoTokenValues(int noTokenValues) {
-    TokenValueMap::noTokenValues = noTokenValues;
-}
-
-const vector<int> &TokenValueMap::getValues() const {
-    return values;
-}
-
-void TokenValueMap::setValues(int values) {
-    TokenValueMap::values.push_back(values);
-}
-
-const vector <string> &TokenValueMap::getStringValues() const {
-    return stringValues;
-}
-
-void TokenValueMap::setStringValues(string stringValues) {
-    TokenValueMap::stringValues.push_back(stringValues);
-}
-
 const vector<bool> &TokenValueMap::getIsDistinct() const {
     return isDistinct;
 }
@@ -36,4 +12,16 @@ void TokenValueMap::setIsDistinct(bool isDistinct) {
 
 void TokenValueMap::modifyIsDistinct(int position, bool isDistinct) {
     TokenValueMap::isDistinct[position] = isDistinct;
+}
+
+const map<int, string> &TokenValueMap::getValuesToStrings() const {
+    return valuesToStrings;
+}
+
+void TokenValueMap::setValuesToStrings() {
+    TokenValueMap::valuesToStrings = map<int, string>();
+}
+
+void TokenValueMap::insertValuesToStrings(int key, string val) {
+    TokenValueMap::valuesToStrings.insert({key, val});
 }
