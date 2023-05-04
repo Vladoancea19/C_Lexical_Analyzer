@@ -40,19 +40,19 @@ void Token::writeToken(TokenValueMap &tokenValueMap, ofstream &fout) const {
 
     switch (this->type) {
         case 1:
-            tokenType = "identificator";
+            tokenType = "identifier";
             break;
         case 2:
-            tokenType = "cuvant cheie";
+            tokenType = "keyword";
             break;
         case 3:
-            tokenType = "constanta intreaga";
+            tokenType = "integer constant";
             break;
         case 4:
-            tokenType = "constanta in virgula mobila";
+            tokenType = "Floating-point constant";
             break;
         case 5:
-            tokenType = "constanta caracter";
+            tokenType = "string literal";
             break;
         case 6:
             tokenType = "punctuator";
@@ -61,7 +61,7 @@ void Token::writeToken(TokenValueMap &tokenValueMap, ofstream &fout) const {
             tokenType = "operator";
             break;
         case 10:
-            tokenType = "caracter special";
+            tokenType = "special character";
             break;
         default:
             return;

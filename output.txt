@@ -1,4 +1,4 @@
-identificator - myNewVariable
+identifier - myNewVariable
 operator - =
-constanta intreaga - 10
+integer constant - 10
 punctuator - ;

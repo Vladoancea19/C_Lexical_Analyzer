@@ -1,3 +1,18 @@
+/**
+ * Implementarea unui analizor lexical pentru un limbaj de programare uzual (Pascal, C, etc., la alegerea studentului).
+ * Conventii:
+ * 1 = identificator
+ * 2 = cuvant cheie
+ * 3 = constanta intreaga
+ * 4 = constanta in virgula mobila
+ * 5 = constanta caracter/sir de caractere
+ * 6 = separator
+ * 7 = spatiu
+ * 8 = comentariu
+ * 9 = operator
+ * 10 = caracter special
+ */
+
 #include <iostream>
 #include <string>
 #include <fstream>

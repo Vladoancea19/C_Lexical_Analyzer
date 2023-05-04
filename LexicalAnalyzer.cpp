@@ -131,7 +131,7 @@ Token LexicalAnalyzer::getToken() {
         return token;
     }
     else {
-        if(token.getType() != 7 && token.getType() != 8 && token.getType() != 10)
+        if(token.getType() != 7 && token.getType() != 8)
             return token;
         else {
             token.setType(0);

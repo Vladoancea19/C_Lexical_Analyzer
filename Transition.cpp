@@ -2,8 +2,7 @@
 
 #include <utility>
 
-Transition::Transition(int currentState, int nextState, string inputSymbol) : currentState(currentState), nextState(nextState),
-                                                                                    inputSymbol(move(inputSymbol)) {}
+Transition::Transition(int currentState, int nextState, string inputSymbol) : currentState(currentState), nextState(nextState), inputSymbol(move(inputSymbol)) {}
 
 int Transition::getCurrentState() const {
     return currentState;
